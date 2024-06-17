@@ -143,7 +143,6 @@ img {
 
 header {
     display: flex;
-    justify-content: space-between;
     padding: var(--spacing);
 }
 
@@ -164,8 +163,8 @@ nav {
 nav ul {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     gap: calc(var(--spacing) * 1.5);
+    align-items: center;
 }
 
 nav ul a {
@@ -177,10 +176,25 @@ nav .button-container {
     flex-direction: column;
     gap: var(--spacing);
     align-items: stretch;
+    position: absolute;
+    bottom: var(--spacing);
+    padding: 0 var(--spacing);
+    width: 100%;
+    max-width: 26rem;
 
     span {
         color: var(--primary-dark);
     }
+}
+
+nav button:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing);
+    padding: calc(var(--spacing) / 2 );
+    background: white;
+    border-radius: var(--radius-01);
 }
 
 nav button:last-of-type {
@@ -188,15 +202,6 @@ nav button:last-of-type {
     background: var(--gradient-01);
     border-radius: var(--radius-01);
     text-align: center;
-}
-
-nav button:first-of-type {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: calc(var(--spacing) / 2 );
-    background: white;
-    border-radius: var(--radius-01);
 }
 
 .logo-header {
@@ -262,7 +267,6 @@ body.menuOpen .menu-button span:nth-of-type(3) {
 .intro {
     display: flex;
     flex-direction: column;
-    /* gap: var(--heading-spacing); */
 }
 
 .intro-text {
@@ -367,7 +371,6 @@ h1 {
 .vacancies {
     display: flex;
     flex-direction: column;
-    /* width: 100%; */
 }
 
 .vacancies .list-view-container{
@@ -421,7 +424,6 @@ h1 {
 .vacancies .vacancy-info {
     display: flex;
     justify-content: space-between;
-    /* width: 100%; */
 }
 
 .vacancies .vacancy-info li {
@@ -748,12 +750,12 @@ footer .socials {
     }
 }
 
-button:hover {
-    background: var(--gradient-03);
-}
-
 nav a:hover {
     border-bottom: 1px solid var(--primary-light);
+}
+
+.news li:hover a {
+    text-decoration: underline;
 }
 
 .active {
@@ -770,6 +772,11 @@ nav a:hover {
 
 @media(min-width: 32rem) {
 
+    nav .button-container {
+        /* position: relative; */
+        /* width: auto; */
+    }
+
     main {
         margin: 0;
         display: grid;
@@ -783,10 +790,6 @@ nav a:hover {
 
     section {
         grid-column: 2/3;
-        /* max-width: 75rem; */
-        /* margin: 0 auto var(--section-spacing); */
-        /* padding: 0 var(--spacing) 0 var(--spacing); */
-        /* padding: 0 var(--spacing); */
     }
 
     /* Intro */
@@ -800,7 +803,6 @@ nav a:hover {
         grid-column: 1/4;
         display: grid;
         grid-template-columns: subgrid;
-        /* width: 100%; */
     }
 
     section.intro::before {
@@ -854,15 +856,14 @@ nav a:hover {
     }
 
     .news .to-news {
-        /* width: 20rem; */
         width: fit-content;
         grid-column: 1;
         grid-row: 2;
-        /* margin: 0 auto; */
         justify-self: start;
     }
 
     /* Vacatures */
+
     .vacancies {
         padding: 0 var(--spacing);
     }
@@ -888,8 +889,6 @@ nav a:hover {
         grid-template-columns: auto auto;
         grid-template-rows: auto auto;
         transform-origin: 0%;
-        will-change: auto;
-        /* gap: calc(var(--spacing) * 2); */
     }
 
     .event-content {
@@ -897,7 +896,6 @@ nav a:hover {
     }
 
     .events ul {
-        /* margin: 0 auto; */
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -915,7 +913,6 @@ nav a:hover {
 
     .events img {
         min-height: 20rem;
-        /* max-height: 50rem; */
     }
 
     .events .image-container {
@@ -930,14 +927,12 @@ nav a:hover {
         grid-column: 3;
         grid-row: 2;
         margin: 0;
-        /* display: none; */
         justify-content: center;
         gap: calc(var(--spacing) * 2 );
     }
 
     .events .to-events {
         width: 20rem;
-        /* margin: 0 auto; */
         grid-column: 1;
         grid-row: 2;
     }
@@ -949,7 +944,6 @@ nav a:hover {
     }
 
     .members .to-members {
-        /* width: 20rem; */
         width: fit-content;
         margin: 0 auto;
     }
@@ -971,23 +965,14 @@ nav a:hover {
 
     /* Intro */
 
-    .intro {
-        /* display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        align-items: center; */
-    }
-
     .intro-text {
-        /* grid-column: 1;
-        grid-row: 1; */
         display: flex;
         flex-direction: column;
         gap: calc(var(--heading-spacing) * 1.5);
         max-width: 28rem;
         margin-top: var(--heading-spacing);
     }
-
+/* 
     .intro .member-counter {
         display: flex;
         justify-content: center;
@@ -1002,40 +987,13 @@ nav a:hover {
         color: white;
         font-size: 2rem;
         background: var(--gradient-02);
-    }
-
-    /* .intro img {
-        display: block;
-        width: 100%;
-        width: 65cqw;
-        width: clamp(100%, 65cqw, 50cqw);
-        height: auto;
-        object-fit: cover;
-        align-self: center;
-    } */
-
-    /* .intro .image-container {
-        position: relative;
-        display: block;
-    }
-
-    .intro .image-container::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgb(0,0,0);
-        background: linear-gradient(270deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 45%, rgba(0,0,0,1) 100%);
-        pointer-events: none;
     } */
 
     /* Footer */
 
     footer {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
 
@@ -1068,7 +1026,6 @@ nav a:hover {
     /* header/nav */
 
     header {
-        /* margin-bottom: calc(var(--section-spacing) / 2); */
         position: sticky;
         top: 0;
         align-items: center;
@@ -1102,6 +1059,9 @@ nav a:hover {
 
     nav .button-container {
         flex-direction: row;
+        position: relative;
+        bottom: 0;
+        width: auto;
 
         span {
             display: none;
@@ -1118,12 +1078,16 @@ nav a:hover {
         font-size: 1.25rem;
     }
 
-    .intro .member-counter {
-        height: 14rem;
-        width: 22rem;
+    /* .intro .member-counter {
+        grid-column: 2/3;
+        grid-row: 2;
+        justify-self: end;
         font-size: 2.5rem;
-        border: var(--spacing) solid var(--primary-dark);
-    }
+        -webkit-text-stroke-width: 1px;
+        color: transparent;
+        -webkit-text-stroke-color: hsla(0,0%,100%,.5);
+        z-index: 200;
+    } */
 
     /* Nieuws */
 
@@ -1151,11 +1115,6 @@ nav a:hover {
         text-align: center;
     }
 
-    .vacancies .to-vacancies {
-        max-width: 20rem;
-        margin: 0 auto;
-    }
-
     /* events */
 
     .events {
@@ -1163,7 +1122,6 @@ nav a:hover {
     }
 
     .events h2 {
-        /* text-align: center; */
         margin-bottom: 0;
     }
 
@@ -1173,22 +1131,12 @@ nav a:hover {
 
     .events .events-intro {
         max-width: 40rem;
-        /* margin: 0 auto;  */
     }
 
     .events .event-content-container {
         grid-template-columns: 1fr 1fr 1fr;
         gap: calc(var(--spacing) * 4);
     }
-
-    /* .events li {
-        position: relative;
-        max-width: none;
-        padding: 0; */
-        /* flex-shrink: 0; */
-        /* scroll-snap-align: center; */
-        /* width: fit-content; */
-    /* } */
 
     .events a {
         display: inline-block;
@@ -1206,7 +1154,6 @@ nav a:hover {
 
     .events .to-events {
         width: 20rem;
-        /* margin: 0 auto; */
     }
 
     /* onze leden */
@@ -1237,14 +1184,8 @@ nav a:hover {
     }
 
     .members .logo-container {
-        /* overflow-x: scroll; */
-        /* scroll-snap-type: x mandatory; */
         margin-bottom: 0;
     }
-
-    /* .logo-container li {
-        scroll-snap-align: center;
-    } */
 
     .members .to-members {
         grid-column: 1;
@@ -1287,12 +1228,6 @@ nav a:hover {
             1fr
         ) 
         1fr;
-    }
-    section {
-    
-        /* max-width: 95rem; */
-        /* margin: 0 auto var(--section-spacing); */
-        /* padding: 0 calc(var(--spacing) * 2) 0 calc(var(--spacing) * 2); */
     }
 
     nav li a, nav button {

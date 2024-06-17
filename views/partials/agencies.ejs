@@ -1,0 +1,14 @@
+<% agencies.forEach(agency=> { %>
+    <li>
+        <a href="#" tabindex="-1">
+            <picture>
+                <% if (agency.logo !=null) { %>
+                    <source srcset="https://fdnd-agency.directus.app/assets/<%= agency.logo %>?format=avif" type="image/avif">
+                    <source srcset="https://fdnd-agency.directus.app/assets/<%= agency.logo %>?format=webp" type="image/webp">
+                    <img height="96" width="96" src="https://fdnd-agency.directus.app/assets/<%= agency.logo %>" alt="agency logo" loading="lazy"
+                    onerror="this.onerror=null; this.src='images/image-fallback.jpg';">
+                <% } %>
+            </picture>
+        </a>
+    </li>
+<% }); %>

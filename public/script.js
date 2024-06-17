@@ -11,8 +11,8 @@ const counters = document.querySelectorAll('.value');
 const speed = 500;
 
 //Carrousel
-const prevButtons = document.querySelectorAll(".button-container button[aria-label='vorige']");
-const nextButtons = document.querySelectorAll(".button-container button[aria-label='volgende']");
+const prevButtons = document.querySelectorAll(".button-container button[aria-label='vorige artikel']");
+const nextButtons = document.querySelectorAll(".button-container button[aria-label='volgende artikel']");
 const carrouselNews = document.querySelector(".news ul");
 const itemWidthNews = document.querySelector(".news li");
 const carrouselEvents = document.querySelector(".events ul")
@@ -37,30 +37,30 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // Counter
 
-    if (counters) {
-        counters.forEach(counter => {
-            // Reset counter to 0 for animation
-            counter.innerText = "0+ leden";
+    // if (counters) {
+    //     counters.forEach(counter => {
+    //         // Reset counter to 0 for animation
+    //         counter.innerText = "0 leden";
 
-            const animate = () => {
-                const value = +counter.getAttribute('target-value');
-                const currentText = counter.innerText;
-                const currentValue = +currentText.replace(/\D/g, ''); // Extract numeric value
+    //         const animate = () => {
+    //             const value = +counter.getAttribute('target-value');
+    //             const currentText = counter.innerText;
+    //             const currentValue = +currentText.replace(/\D/g, ''); // Extract numeric value
 
-                const increment = Math.ceil(value / speed);
-                const newValue = currentValue + increment;
+    //             const increment = Math.ceil(value / speed);
+    //             const newValue = currentValue + increment;
 
-                if (newValue < value) {
-                    counter.innerText = `${newValue}+ leden`;
-                    setTimeout(animate, 10);
-                } else {
-                    counter.innerText = `${value}+ leden`;
-                }
-            };
+    //             if (newValue < value) {
+    //                 counter.innerText = `${newValue} leden`;
+    //                 setTimeout(animate, 10);
+    //             } else {
+    //                 counter.innerText = `${value} leden`;
+    //             }
+    //         };
 
-            animate();
-        });
-    }
+    //         animate();
+    //     });
+    // }
 
     // Carrousel buttons
 
