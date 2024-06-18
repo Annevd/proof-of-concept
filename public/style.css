@@ -140,6 +140,7 @@ header {
     position: sticky;
     top: 0;
     align-items: center;
+    -webkit-backdrop-filter: blur(50px); 
     backdrop-filter: blur(50px);
     z-index: 103;
 }
@@ -246,6 +247,7 @@ header .button-container {
     /* background: var(--primary-light); */
     /* z-index: 102;
     backdrop-filter: blur(100px); */
+    -webkit-backdrop-filter: blur(100px); 
     backdrop-filter: blur(100px);
 
     span {
@@ -717,7 +719,7 @@ footer .menu-links {
     display: flex;
     flex-direction: column;
     gap: var(--spacing);
-    margin-bottom: var(--heading-spacing);
+    margin-bottom: calc(var(--section-spacing) * 2);
     /* text-align: center; */
 }
 
