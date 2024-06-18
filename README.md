@@ -32,7 +32,7 @@ Van de Voorhoede hebben wij de opdracht gekregen om een homepage te redesignen e
 ![Untitled (2)](https://github.com/Annevd/proof-of-concept/assets/144004647/3141cbb8-6029-403f-a60f-14449a2ec0cc)
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
-[Livelink]()
+[Livelink](https://proof-of-concept-ezyj.onrender.com)
 
 ## Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
