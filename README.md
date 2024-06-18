@@ -28,7 +28,8 @@ Van de Voorhoede hebben wij de opdracht gekregen om een homepage te redesignen e
 <!-- Voeg een mooie poster visual toe 📸 -->
 
 ### Visual
-![Untitled](https://github.com/Annevd/proof-of-concept/assets/144004647/5086a268-cb28-434f-92d1-3e6db672ce0d)
+
+![Untitled (2)](https://github.com/Annevd/proof-of-concept/assets/144004647/3141cbb8-6029-403f-a60f-14449a2ec0cc)
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
 [Livelink]()
