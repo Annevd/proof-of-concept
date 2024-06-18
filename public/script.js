@@ -5,6 +5,7 @@ const body = document.querySelector("body")
 // Menu
 const menuButton = document.querySelector(".menu-button")
 const menu = document.querySelector("nav")
+const profileButton = document.querySelector(".profile")
 
 // Counter
 const counters = document.querySelectorAll('.value');
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     menuButton.addEventListener('click', function(){
         menu.classList.toggle('menu-opened')
         body.classList.toggle("menuOpen");
+        profileButton.classList.toggle("no-display")
         document.documentElement.classList.toggle("no-scroll");
     })
 
