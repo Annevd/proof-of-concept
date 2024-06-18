@@ -544,8 +544,8 @@ h1 {
 
 .events li {
     max-width: 30rem;
-    position: sticky;
-    top: 0;
+    /* position: sticky;
+    top: 0; */
     padding-top: calc(var(--index)* 1em);
     transition: var(--transition-01);
 }
@@ -567,6 +567,8 @@ h1 {
         --index0: calc(var(--index) - 1);
         --reverse-index: calc(var(--numcards) - var(--index0));
         --reverse-index0: calc(var(--reverse-index) - 1);
+        position: sticky;
+        top: 0;
     }
 }
 
