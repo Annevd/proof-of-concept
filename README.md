@@ -38,6 +38,8 @@ Van de Voorhoede hebben wij de opdracht gekregen om een homepage te redesignen e
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 Om deze pagina live te bekijken kan je klikken op de livelink in de About sectie van deze repository.
 
+Op deze nieuwe homepage van de Dutch Digital Agencies kun je inloggen op jouw profiel, lid worden van de DDA, het laatste niews bekijken, vacatures bekijken, aankomende events bekijken en alle 163 leden van de DDA bekijken.
+
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 Ook bij deze opdracht heb ik weer gebruik gemaakt van het principe Progressive Enhancement. Dit houdt in dat je werkt in verschillende lagen.
