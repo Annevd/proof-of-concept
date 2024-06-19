@@ -47,7 +47,8 @@
 
 /* ------ Fonts ------ */
     --primary-font: "Sunflower", sans-serif;
-    --paragraph: 1.5rem;
+    --paragraph-large: 1.5rem;
+    --paragraph-small: 1.15rem;
 
 /* ------ Transitions ------ */
     --transition-01: .3s ease-in-out;
@@ -173,7 +174,7 @@ nav ul {
 }
 
 nav ul a {
-    font-size: var(--paragraph);
+    font-size: var(--paragraph-large);
 }
 
 nav .button-container {
@@ -291,20 +292,16 @@ body.menuOpen .menu-button span:nth-of-type(3) {
     z-index: 98;
 }
 
+.intro-text p {
+    font-size: var(--paragraph-small);
+}
+
 h1 {
     display: flex;
     flex-direction: column;
     font-size: 4rem;
     font-size: clamp(4rem, 12cqw, 8rem);
     font-weight: 400;
-}
-
-.intro .image-container {
-    display: none;
-}
-
-.intro img {
-    display: none;
 }
 
 .intro button {
@@ -378,7 +375,7 @@ h1 {
     display: none;
     justify-content: center;
     gap: calc(var(--spacing) * 2 );
-    margin-bottom: var(--heading-spacing);
+    margin: var(--heading-spacing) 0;
 }
 
 .js-enabled .news .button-container {
@@ -494,6 +491,7 @@ h1 {
 
 .events-intro {
     margin-bottom: var(--heading-spacing);
+    font-size: var(--paragraph-small);
 }
 
 .events ul {
@@ -613,6 +611,7 @@ h1 {
 
 .members p {
     margin-bottom: var(--heading-spacing);
+    font-size: var(--paragraph-small);
 }
 
 .members .slider {
@@ -951,7 +950,7 @@ button[type="submit"]:focus {
     }
 
     .intro p {
-        font-size: var(--paragraph);
+        font-size: var(--paragraph-large);
     }
 
     /* News */
@@ -1006,7 +1005,7 @@ button[type="submit"]:focus {
 
     .events .events-intro {
         max-width: 40rem;
-        font-size: var(--paragraph);
+        font-size: var(--paragraph-large);
     }
 
     .events .event-content-container {
@@ -1071,7 +1070,7 @@ button[type="submit"]:focus {
     }
 
     .members  p {
-        font-size: var(--paragraph);
+        font-size: var(--paragraph-large);
     }
 
     .members .logo-container {
