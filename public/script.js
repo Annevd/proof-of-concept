@@ -37,33 +37,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
         document.documentElement.classList.toggle("no-scroll");
     })
 
-    // Counter
-
-    // if (counters) {
-    //     counters.forEach(counter => {
-    //         // Reset counter to 0 for animation
-    //         counter.innerText = "0 leden";
-
-    //         const animate = () => {
-    //             const value = +counter.getAttribute('target-value');
-    //             const currentText = counter.innerText;
-    //             const currentValue = +currentText.replace(/\D/g, ''); // Extract numeric value
-
-    //             const increment = Math.ceil(value / speed);
-    //             const newValue = currentValue + increment;
-
-    //             if (newValue < value) {
-    //                 counter.innerText = `${newValue} leden`;
-    //                 setTimeout(animate, 10);
-    //             } else {
-    //                 counter.innerText = `${value} leden`;
-    //             }
-    //         };
-
-    //         animate();
-    //     });
-    // }
-
     // Carrousel buttons
 
     body.classList.add('js-enabled');

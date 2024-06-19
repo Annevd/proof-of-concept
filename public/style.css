@@ -51,6 +51,7 @@
 
 /* ------ Transitions ------ */
     --transition-01: .3s ease-in-out;
+    --transition-02: .05s ease-in-out;
 
 /* ------ Overig ----- */
     --vacancy-height: auto;
@@ -156,7 +157,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100dvh;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     background: var(--main-background);
@@ -168,10 +169,11 @@ nav ul {
     flex-direction: column;
     gap: calc(var(--spacing) * 1.5);
     align-items: center;
+    margin: auto 0;
 }
 
 nav ul a {
-    font-size: 1.75rem;
+    font-size: var(--paragraph);
 }
 
 nav .button-container {
@@ -179,9 +181,7 @@ nav .button-container {
     flex-direction: column;
     gap: var(--spacing);
     align-items: stretch;
-    position: absolute;
-    bottom: var(--spacing);
-    padding: 0 var(--spacing);
+    padding: 0 var(--spacing) var(--spacing);
     width: 100%;
     max-width: 26rem;
 
@@ -209,6 +209,7 @@ nav button:last-of-type {
     text-align: center;
     width: 100%;
     font-size: 1.25rem;
+    transition: var(--transition-02);
 }
 
 .logo-header {
@@ -222,31 +223,18 @@ header .button-container {
     display: flex;  
     align-items: center;
     gap: var(--spacing);
-    /* position: fixed;
-    right: var(--spacing);
-    top: var(--spacing); */
     z-index: 102;
 }
 
-.profile {
-    /* backdrop-filter: blur(100px); */
-
-    svg path {
-        fill: var(--primary-light);
-    }
+.profile svg path {
+    fill: var(--primary-light);
 }
 
 .menu-button {
     display:grid;
 	place-items:center;
-    /* position: fixed;
-    right: var(--spacing);
-    top: var(--spacing); */
     width: 3rem;
     height: 3rem;
-    /* background: var(--primary-light); */
-    /* z-index: 102;
-    backdrop-filter: blur(100px); */
     -webkit-backdrop-filter: blur(100px); 
     backdrop-filter: blur(100px);
 
@@ -284,7 +272,6 @@ body.menuOpen .menu-button span:nth-of-type(3) {
 
 .menu-opened {
     display: flex;
-    /* gap: var(--heading-spacing); */
     z-index: 99;
 }
 
@@ -323,6 +310,7 @@ h1 {
 .intro button {
     padding: var(--spacing);
     background: var(--gradient-01);
+    transition: var(--transition-02);
 }
 
 /* Nieuws */
@@ -383,6 +371,7 @@ h1 {
     text-align: center;
     border-radius: var(--radius-01);
     width: 100%;
+    transition: var(--transition-02);
 }
 
 .news .button-container {
@@ -469,6 +458,7 @@ h1 {
     background: var(--gradient-01);
     border-radius: var(--radius-01);
     text-align: center;
+    transition: var(--transition-02);
 }
 
 
@@ -544,8 +534,6 @@ h1 {
 
 .events li {
     max-width: 30rem;
-    /* position: sticky;
-    top: 0; */
     padding-top: calc(var(--index)* 1em);
     transition: var(--transition-01);
 }
@@ -613,6 +601,7 @@ h1 {
     background: var(--gradient-01);
     border-radius: var(--radius-01);
     text-align: center;
+    transition: var(--transition-02);
 }
 
 /* Onze leden */
@@ -680,6 +669,7 @@ h1 {
     background: var(--gradient-01);
     border-radius: var(--radius-01);
     text-align: center;
+    transition: var(--transition-02);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -722,7 +712,6 @@ footer .menu-links {
     flex-direction: column;
     gap: var(--spacing);
     margin-bottom: calc(var(--section-spacing) * 2);
-    /* text-align: center; */
 }
 
 footer h3 {
@@ -751,6 +740,7 @@ footer button[type="submit"] {
     padding: calc(var(--spacing) / 2);
     background: var(--gradient-01);
     color: var(--primary-light);
+    transition: var(--transition-02);
 }
 
 footer .contact {
@@ -777,6 +767,8 @@ footer .socials {
 
 /* ----------- States ----------- */
 
+/* Scrollbar removed */
+
 @supports (scrollbar-width: none) {
     .news ul,
     .vacancies ul,
@@ -786,6 +778,8 @@ footer .socials {
       scrollbar-width: none;
     }
 }
+
+/* Menu links */
 
 nav a,
 .menu-links a {
@@ -809,12 +803,16 @@ nav a.active,
     background-position-x: left;
 }
 
+/* Articles & Events */
+
 .news li:hover,
 .news li:focus,
 .events li:hover,
 .events li:focus {
     transform: translateY(-0.5rem);
 }
+
+/* Vacancies */
 
 .vacancy {
     border: 4px solid;
@@ -845,18 +843,30 @@ nav a.active,
 .vacancy:focus-within {
     background: transparent;
     --_i: 100%;
-    transition: .2s, -webkit-mask-size .2s .2s;
-  }
+    transition: .3s, -webkit-mask-size .3s .3s;
+}
 
-/* .intro-button:hover,
+/* Button/link hovers */
+
+nav button:last-of-type:hover,
+nav button:last-of-type:focus,
+.intro button:hover,
+.intro button:focus,
 .to-news:hover,
+.to-news:focus,
 .to-vacancies:hover,
+.to-vacancies:focus,
 .to-events:hover,
-.to-members:hover,
-button[type="submit"]:hover {
+.to-events:focus,
+.to-members:hover,  
+.to-members:focus,
+button[type="submit"]:hover,
+button[type="submit"]:focus {
     background: transparent;
-    border: 2px solid var(--primary-light);
-} */
+    box-shadow: inset 0px 0px 0px 3px var(--primary-light);
+}
+
+/* Logo slider */
 
 .slider:hover {
     .logo-container {
@@ -865,7 +875,7 @@ button[type="submit"]:hover {
 }
 
 .members .logo-container li:hover {
-    transform: translateY(-10px); /* Adjust this value as needed */
+    transform: translateY(-10px); 
 }
 
 
@@ -875,9 +885,6 @@ button[type="submit"]:hover {
     nav .button-container {
         flex-direction: row;
         align-items: stretch;
-        width: 100%;
-        right: 0;
-        left: 0;
         max-width: none;
     }
 }
@@ -885,12 +892,6 @@ button[type="submit"]:hover {
 /* ----------- Media queries: Tablet S ----------- */
 
 @media(min-width: 32rem) {
-
-    nav .button-container {
-        /* position: relative; */
-        /* width: auto; */
-    }
-
     nav li {
         width: max-content;
     }
@@ -1005,7 +1006,6 @@ button[type="submit"]:hover {
 
     .events .events-intro {
         max-width: 40rem;
-        margin-right: auto;
         font-size: var(--paragraph);
     }
 
@@ -1038,7 +1038,6 @@ button[type="submit"]:hover {
     }
 
     .events img {
-        /* min-height: 20rem;  */
         max-height: 20rem;
     }
 
@@ -1081,7 +1080,6 @@ button[type="submit"]:hover {
 
     .members .to-members {
         width: fit-content;
-        /* margin: 0 auto; */
         font-size: 1.25rem;
     }
 
@@ -1106,26 +1104,9 @@ button[type="submit"]:hover {
     .intro-text {
         display: flex;
         flex-direction: column;
-        /* gap: calc(var(--heading-spacing) * 1.5); */
         max-width: 40rem;
         margin-top: var(--heading-spacing);
     }
-/* 
-    .intro .member-counter {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 8rem;
-        width: 14rem;
-        position: absolute;
-        top: -2rem;
-        left: -2rem;
-        border: calc(var(--spacing) / 2) solid var(--primary-dark);
-        border-radius: 0.25rem;
-        color: white;
-        font-size: 2rem;
-        background: var(--gradient-02);
-    } */
 
     /* Footer */
 
@@ -1162,14 +1143,6 @@ button[type="submit"]:hover {
     }
 
     /* header/nav */
-
-    /* header {
-        position: sticky;
-        top: 0;
-        align-items: center;
-        backdrop-filter: blur(50px);
-        z-index: 103;
-    } */
 
     .logo-header {
         width: 7rem;
@@ -1229,37 +1202,11 @@ button[type="submit"]:hover {
         width: 7rem;
     }
 
-    /* Intro */
-/* 
-    .intro p {
-        font-size: 1.5rem;
-    } */
-
-    /* .intro .member-counter {
-        grid-column: 2/3;
-        grid-row: 2;
-        justify-self: end;
-        font-size: 2.5rem;
-        -webkit-text-stroke-width: 1px;
-        color: transparent;
-        -webkit-text-stroke-color: hsla(0,0%,100%,.5);
-        z-index: 200;
-    } */
-
     /* Nieuws */
-
-    .news {
-        margin-right: 0;  
-        padding-right: 0;  
-    }
 
     .news .news-content {
         grid-template-columns: 1fr 1fr 1fr;
         gap: calc(var(--spacing) * 4);
-    }    
-
-    .news .to-news {
-        margin: 0;
     }
 
     .news .button-container {
@@ -1281,13 +1228,9 @@ button[type="submit"]:hover {
     .events h2 {
         margin-bottom: 0;
     }
-
-    /* .events .events-intro {
-        font-size: 1.25rem;
-    } */
-
+    
     .events .events-intro {
-        max-width: 40rem;
+        margin: 0;
     }
 
     .events .event-content-container {
@@ -1377,17 +1320,17 @@ button[type="submit"]:hover {
 
 /* ----------- Media queries: Desktop ----------- */
 
-@media(min-width: 88rem) {
+@media(min-width: 120rem) {
     main {
         grid-template-columns: 1fr 
         minmax(
-            min(100%, 95rem),
+            min(100%, 100rem),
             1fr
         ) 
         1fr;
     }
 
     nav li a, nav button {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
 }
