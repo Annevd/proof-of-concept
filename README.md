@@ -6,11 +6,11 @@ Ontwerp en maak een data driven online concept voor een opdrachtgever.
 
 ## 📋 Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
-  * [Gebruik](#gebruik)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Bronnen](#bronnen)
+  * [Beschrijving](https://github.com/Annevd/proof-of-concept?tab=readme-ov-file#-beschrijving)
+  * [Gebruik](https://github.com/Annevd/proof-of-concept?tab=readme-ov-file#%EF%B8%8F-gebruik)
+  * [Kenmerken](https://github.com/Annevd/proof-of-concept?tab=readme-ov-file#-kenmerken)
+  * [Installatie](https://github.com/Annevd/proof-of-concept?tab=readme-ov-file#-installatie)
+  * [Bronnen](https://github.com/Annevd/proof-of-concept?tab=readme-ov-file#%E2%84%B9%EF%B8%8F-bronnen)
   * [Licentie](#licentie)
 
 ## 📄 Beschrijving
