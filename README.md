@@ -42,6 +42,8 @@ Op deze nieuwe homepage van de Dutch Digital Agencies kun je inloggen op jouw pr
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+Dit project is gemaakt met Node, Express, EJS.
+
 Ook bij deze opdracht heb ik weer gebruik gemaakt van het principe Progressive Enhancement. Dit houdt in dat je werkt in verschillende lagen.
 
 Namelijk:
