@@ -4,7 +4,7 @@
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 Ontwerp en maak een data driven online concept voor een opdrachtgever.
 
-## Inhoudsopgave
+## 📋 Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
   * [Gebruik](#gebruik)
@@ -13,7 +13,7 @@ Ontwerp en maak een data driven online concept voor een opdrachtgever.
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-## Beschrijving
+## 📄 Beschrijving
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
 Bij deze opdracht lag de focus op het laten zien en toepassen van alles wat we de afgelopen 6 sprints geleerd hebben. Denk aan data ophalen uit een API, Node, EJS, serverside rendering, performance, etc.
 
@@ -34,13 +34,13 @@ Van de Voorhoede hebben wij de opdracht gekregen om een homepage te redesignen e
 <!-- Voeg een link toe naar Github Pages 🌐-->
 [Livelink](https://proof-of-concept-ezyj.onrender.com)
 
-## Gebruik
+## ✂️ Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 Om deze pagina live te bekijken kan je klikken op de livelink in de About sectie van deze repository.
 
 Op deze nieuwe homepage van de Dutch Digital Agencies kun je inloggen op jouw profiel, lid worden van de DDA, het laatste niews bekijken, vacatures bekijken, aankomende events bekijken en alle 163 leden van de DDA bekijken.
 
-## Kenmerken
+## 📍 Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 Dit project is gemaakt met Node, Express, EJS.
 
@@ -55,7 +55,7 @@ Namelijk:
 
 Met keyframe animations, scroll driven animations en Javascript, heb ik de homepage proberen te verrijken zodat deze toegankelijk en leuk is voor alle gebruikers.
 
-## Installatie
+## 📲 Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
 1. Installeer NodeJs
 2. Fork deze repository
@@ -64,7 +64,7 @@ Met keyframe animations, scroll driven animations en Javascript, heb ik de homep
 5. Run de command `npm start`
 6. Klik op de localhost link en begin met coden!
 
-## Bronnen
+## ℹ️ Bronnen
 
 - [Briefing Debriefing](https://github.com/fdnd-task/briefing-debriefing)
 - [Huidige DDA website](https://dutchdigitalagencies.com/)
