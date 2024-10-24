@@ -53,6 +53,8 @@ Namelijk:
 - **Laag 3 (usable):** de bruikbare laag (bijv. extra client-side Javascript)
 - **Laag 4 (pleasurable):** de extra leuke laag (bijv. animaties)
 
+Ook heb ik geëxperimenteerd met nieuwe CSS technieken zoals [`subgrid`](https://github.com/Annevd/proof-of-concept/wiki/3.-Bouwen#subgrid) en [scroll driven animations](https://github.com/Annevd/proof-of-concept/wiki/3.-Bouwen#scroll-driven-animation-1). Klik op de desbetreffende links om hier meer over te lezen.
+
 Met keyframe animations, scroll driven animations en Javascript, heb ik de homepage proberen te verrijken zodat deze toegankelijk en leuk is voor alle gebruikers.
 
 ## 📲 Installatie
